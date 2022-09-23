@@ -4,12 +4,16 @@ import numpy as np
 import codecs, json 
 
 
-
-
 class NumpyEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, np.ndarray):
-            return {'matrix':{'array': np.reshape(obj,-1,order='F').tolist(),'nlin': obj.shape[0],'ncol': obj.shape[1]}}
+            return {    'matrix':
+                        {   
+                            'array': np.reshape(obj,-1,order='F').tolist(),
+                            'nlin' : obj.shape[0],
+                            'ncol' : obj.shape[1]
+                        }
+                    }
         return json.JSONEncoder.default(self, obj)
 
 
