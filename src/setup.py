@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name   ='NumpyToJson',
-    version='0.1',
+    version='0.1.0',
     author='Fernando Pujaico Rivera',
     author_email='fernando.pujaico.rivera@gmail.com',
     packages=['NumpyToJson'],
